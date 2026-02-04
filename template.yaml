@@ -21,6 +21,29 @@ Parameters:
     Default: 'True'
     Description: Debug parameter for logging purposes
 
+  AuthUserPoolId:
+    Type: String
+    Description: User Pool ID for Auth Service
+
+  AuthClientId:
+    Type: String
+    Description: Client ID for Auth Service
+  
+  AuthClientSecret:
+    Type: String
+    Description: Client Secret for Auth Service
+    NoEcho: true
+
+  AuthAwsAccessKeyId:
+    Type: String
+    Description: AWS Access Key ID for Auth Service
+    NoEcho: true
+
+  AuthAwsSecretAccessKey:
+    Type: String
+    Description: AWS Secret Access Key for Auth Service
+    NoEcho: true
+
 Globals:
   Function:
     Timeout: 30
@@ -1403,6 +1426,14 @@ Resources:
         - x86_64
       Policies:
         - AmazonSSMReadOnlyAccess
+      Environment:
+        Variables:
+        USER_POOL_ID: !Ref AuthUserPoolId
+        CLIENT_ID: !Ref AuthClientId
+        CLIENT_SECRET: !Ref AuthClientSecret
+        AUTH_AWS_ACCESS_KEY_ID: !Ref AuthAwsAccessKeyId
+        AUTH_AWS_SECRET_ACCESS_KEY: !Ref AuthAwsSecretAccessKey
+
 
   EntityDisputeService:
     Type: AWS::Serverless::Function

@@ -7,5 +7,5 @@ s3_prefix = "sam-multi-lambda-app-backend-development-stack"
 region = "us-west-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "DatabaseUrl=\"postgresql://postgres:PASSWORD@sam-multi-lambda-app-dev.c5ai8qquicaq.us-west-1.rds.amazonaws.com:5432/sam_multi_lambda_app_dev\" CognitoUserPoolArn=\"arn:aws:cognito-idp:us-west-1:123456789012:userpool/us-west-1_XXXXXXXXX\" Debug=\"True\""
+parameter_overrides = "DatabaseUrl=\"postgresql://postgres:PASSWORD@bellemar-dev.c5ai8qquicaq.us-west-1.rds.amazonaws.com:5432/bellemar_dev\" CognitoUserPoolArn=\"arn:aws:cognito-idp:us-west-1:123456789012:userpool/us-west-1_XXXXXXXXX\" Debug=\"True\" AuthUserPoolId=\"us-west-1_XXXXXXXXX\" AuthClientId=\"XXXXXXXXXXXXXXXXXXXXXXXXXX\" AuthClientSecret=\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\" AuthAwsAccessKeyId=\"XXXXXXXXXXXXXXXXXXXX\" AuthAwsSecretAccessKey=\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\""
 image_repositories = []

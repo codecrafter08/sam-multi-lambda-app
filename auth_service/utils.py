@@ -6,9 +6,9 @@ from botocore.exceptions import ClientError
 
 USER_POOL_ID = os.environ.get('USER_POOL_ID')
 CLIENT_ID = os.environ.get('CLIENT_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AUTH_AWS_SECRET_ACCESS_KEY')
 region_name= os.environ.get('AWS_REGION', 'us-west-1')
-AWS_ACCESS_KEY_ID= os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID= os.environ.get('AUTH_AWS_ACCESS_KEY_ID')
 CLIENT_SECRET= os.environ.get('CLIENT_SECRET')
 
 
