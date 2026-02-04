@@ -1,0 +1,11 @@
+# This is the development configuration. Do not overwrite from the production branch.
+version = 0.1
+[default.deploy.parameters]
+stack_name = "sam-multi-lambda-app-backend-development-stack"
+resolve_s3 = true
+s3_prefix = "sam-multi-lambda-app-backend-development-stack"
+region = "us-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "DatabaseUrl=\"postgresql://postgres:PASSWORD@sam-multi-lambda-app-dev.c5ai8qquicaq.us-west-1.rds.amazonaws.com:5432/sam_multi_lambda_app_dev\" CognitoUserPoolArn=\"arn:aws:cognito-idp:us-west-1:123456789012:userpool/us-west-1_XXXXXXXXX\" Debug=\"True\""
+image_repositories = []

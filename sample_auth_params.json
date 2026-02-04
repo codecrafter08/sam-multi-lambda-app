@@ -1,0 +1,9 @@
+{
+	"UserPoolId": "",
+	"ClientId": "",
+	"AuthFlow": "ADMIN_NO_SRP_AUTH",
+	"AuthParameters": {
+		"USERNAME": "",
+		"PASSWORD": ""
+	}
+}
